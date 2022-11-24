@@ -1,12 +1,27 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
-//Funciones por declaracion, Esta funcion perimite declara una funcion que exite a lo largo de todo el codio, se puede ejecutar en cualquier lugar del programa.
+//Funciones por expresion: en cuando se utilizan las funciones dentro una variable para luego utilizarlar
 
-function declaracionMasUsada() {
-  return " hola, esta es la forma de funcion mas usada en Javascript"
+const saludoConstante = function saludo() {
+
+  return "Invocar una function desde una Constante"
+  
 }
 
-//Incovar la funcion
-declaracionMasUsada();
-//Mostrar consola
-console.log(declaracionMasUsada());
+//invoca la constante
+saludoConstante();
+//Mostrar en consola
+console.log(saludoConstante());
+
+
+const saludoVariable = function saludo() {
+
+  return "Invocar una function desde una Variable"
+  
+}
+
+//invoca la constante
+saludoVariable();
+//Mostrar en consola
+console.log(saludoVariable());
+
 })
