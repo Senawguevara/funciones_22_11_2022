@@ -1,27 +1,8 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
-//Funciones por expresion: en cuando se utilizan las funciones dentro una variable para luego utilizarlar
+//Funciones como Objetos: no es muy comun utilizar la funcion de esta forma ya que todo debe trabajarse como objeto 
+const saludar = new Function("return 'Hola desde un parametro';");
 
-const saludoConstante = function saludo() {
-
-  return "Invocar una function desde una Constante"
-  
-}
-
-//invoca la constante
-saludoConstante();
-//Mostrar en consola
-console.log(saludoConstante());
-
-
-const saludoVariable = function saludo() {
-
-  return "Invocar una function desde una Variable"
-  
-}
-
-//invoca la constante
-saludoVariable();
-//Mostrar en consola
-console.log(saludoVariable());
+saludar(); // 'Hola'
+console.log(saludar())
 
 })
