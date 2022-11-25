@@ -1,8 +1,18 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
-//Funciones como Objetos: no es muy comun utilizar la funcion de esta forma ya que todo debe trabajarse como objeto 
-const saludar = new Function("return 'Hola desde un parametro';");
+//Funciones Anonimas: son llamada tambien funciones lambda, son un tipo de funciones que se declaran sin nombre de funcion y se alojan en el interior de una variable y haciendo referencia a ella.
+ 
+const lamba = function () {
+    return "Hola esta es una funcion lamba"
+    
+};
+lamba;
+lamba();
 
-saludar(); // 'Hola'
-console.log(saludar())
+//se muestra en consola como una string
+console.log(lamba);
+
+//se muesta en consolo como el resultado de una funcion
+console.log(lamba());
+
 
 })
