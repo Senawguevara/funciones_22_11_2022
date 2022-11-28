@@ -1,18 +1,19 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
-//Funciones Anonimas: son llamada tambien funciones lambda, son un tipo de funciones que se declaran sin nombre de funcion y se alojan en el interior de una variable y haciendo referencia a ella.
+//callbcks: Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
  
-const lamba = function () {
-    return "Hola esta es una funcion lamba"
-    
-};
-lamba;
-lamba();
+  //Creacion de la funcion incial
+function saludar(nombre) {
+  console.log('Hola ' + nombre);
+}
 
-//se muestra en consola como una string
-console.log(lamba);
+//configura la funcion para el callback
+function procesa(callback) {
+  let nombre = 'mi nombre es Wilmar guevara';
+  callback(nombre);
+}
 
-//se muesta en consolo como el resultado de una funcion
-console.log(lamba());
-
+//se invoca la funcion
+procesa(saludar);
+  
 
 })
