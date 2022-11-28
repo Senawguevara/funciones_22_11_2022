@@ -1,19 +1,24 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
-//callbcks: Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
- 
-  //Creacion de la funcion incial
-function saludar(nombre) {
-  console.log('Hola ' + nombre);
-}
+ //Funciones Autoejecutables;Básicamente, sólo tenemos que envolver entre paréntesis la función anónima en cuestión (no necesitamos que tenga nombre, puesto que no la vamos a guardar) y luego, ejecutarla:
 
-//configura la funcion para el callback
-function procesa(callback) {
-  let nombre = 'mi nombre es Wilmar guevara';
-  callback(nombre);
-}
+// Función autoejecutable se debe incluir en parentesis la funcion
+(function () {
+  console.log("Esta es una funcion autoejecutable sin invocarla");
+})();
 
-//se invoca la funcion
-procesa(saludar);
+// Función autoejecutable con parámetros
+(function (na) {
+  console.log(`¡Hola, ${na}!`);
+})("Este es un parametro");
+
+//Funcion autoejecutable con constante 
+const fur = (function (name) {
+  return `¡Hola, ${name}!`;
+})("funcion en constante");
+
+console.log(fur);
+console.log(typeof fur);
+
   
 
 })
