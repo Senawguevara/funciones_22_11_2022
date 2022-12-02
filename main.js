@@ -1,19 +1,21 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
-//clausura o cieres: A grandes rasgos, en Javascript, una clausura o cierre se define como una función que «encierra» variables en su propio ámbito (y que continúan existiendo aún habiendo terminado la función).por cada vez que se llame la funcion esta incrementaria un nuevo valor segun el ejemplo
+//tipo flecha, son una forma corta de escribir funciones , apartir del ECMAS6 se elimina la palabra function y se añade ""=>" antes de abrir las llaves"
 
 
-// Clausura: Función incr()
-const incr = (function () {
-  let num = 0;
-  return function () {
-    num++;
-    return num;
-  };
-})();
+//Forma general del funcion tipo flecha
+const func = () => {
+  return "Función flecha.";
+};
 
-typeof incr; // 'function'
-console.log(incr()); // 1
-console.log(incr());// 2
-console.log(incr());// 3
+console.log(func());
+//Forma simplificada
+
+const func2 = () => "Función flecha sen el return."; // 0 parámetros: Devuelve "Función flecha"
+console.log(func2());
+const func3 = (e) => e + 1; // 1 parámetro: Devuelve el valor de e + 1
+console.log(func3());
+const func4 = (a, b) => a + b; // 2 parámetros: Devuelve el valor de a + b
+console.log(func4());
+
 
 })
