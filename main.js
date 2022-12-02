@@ -1,24 +1,19 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
- //Funciones Autoejecutables;Básicamente, sólo tenemos que envolver entre paréntesis la función anónima en cuestión (no necesitamos que tenga nombre, puesto que no la vamos a guardar) y luego, ejecutarla:
+//clausura o cieres: A grandes rasgos, en Javascript, una clausura o cierre se define como una función que «encierra» variables en su propio ámbito (y que continúan existiendo aún habiendo terminado la función).por cada vez que se llame la funcion esta incrementaria un nuevo valor segun el ejemplo
 
-// Función autoejecutable se debe incluir en parentesis la funcion
-(function () {
-  console.log("Esta es una funcion autoejecutable sin invocarla");
+
+// Clausura: Función incr()
+const incr = (function () {
+  let num = 0;
+  return function () {
+    num++;
+    return num;
+  };
 })();
 
-// Función autoejecutable con parámetros
-(function (na) {
-  console.log(`¡Hola, ${na}!`);
-})("Este es un parametro");
-
-//Funcion autoejecutable con constante 
-const fur = (function (name) {
-  return `¡Hola, ${name}!`;
-})("funcion en constante");
-
-console.log(fur);
-console.log(typeof fur);
-
-  
+typeof incr; // 'function'
+console.log(incr()); // 1
+console.log(incr());// 2
+console.log(incr());// 3
 
 })
